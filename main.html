@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <title>Form Alert Output</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <form id="myForm">
+    <label>First Name: </label>
+    <input type="text" name="First Name" id="firstName"><br><br>
+
+    <label>Last Name: </label>
+    <input type="text" name="Last Name" id="lastName"><br><br>
+
+    <label>Phone Number: </label>
+    <input type="text" name="Phone Number" id="phone"><br><br>
+
+    <label>Email ID: </label>
+    <input type="email" name="Email ID" id="email"><br><br>
+
+    <button type="button" onclick="showAlert()">Submit</button>
+  </form>
+
+  <script>
+    function showAlert() {
+      const first = document.getElementById("firstName").value;
+      const last = document.getElementById("lastName").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+
+      alert(
+        "First Name: " + first + " " +
+        "Last Name: " + last + " " +
+        "Phone Number: " + phone + " " +
+        "Email ID: " + email
+      );
+    }
+  </script>
 
 </body>
-
 </html>
